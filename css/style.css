@@ -1,0 +1,106 @@
+/* html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+} */
+
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    /* text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0; */
+}
+/* h1 {
+    font-size: 5em;
+    margin: 0;
+} */
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #38bdf8; /* cyan-400 */
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5em;
+    color: #8bceeb
+}
+#blog {
+    margin-top: 50px;
+    width: 80%;
+    max-width: 800px;
+    height: 40vh;
+    overflow-y: auto;
+    /* border: 1px solid #0f0; */
+    padding: 20px;
+    /* background-color: rgba(0, 10, 0, 0.7); */
+    text-align: left;
+    display: inline-block;
+}
+/* Custom scrollbar for tech feel */
+#blog::-webkit-scrollbar {
+    width: 10px;
+}
+#blog::-webkit-scrollbar-track {
+    background: #5ef35e;
+}
+
+#blog h1 {
+    color: #e1e8eb;
+    font-size: 1.2em;
+}
+#blog h2, #blog h3 {
+    color: #e1e8eb;
+    /* text-shadow: 0 0 5px #0f0; */
+}
+#blog a {
+    color: #b6c2ce;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+#blog a:hover {
+    /* text-decoration: underline; */
+    text-shadow: 0 0 5px #0f0;
+}
+.post-content {
+    margin-top: 20px;
+}
+#back-button {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#back-button:hover {
+    /* text-decoration: underline; */
+    text-shadow: 0 0 5px #0f0;
+}
