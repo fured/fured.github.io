@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    display: flex;
 }
 
 #particles-js {
@@ -29,7 +30,24 @@ body {
     top: 50%;
     left: 50%;
     width: 100%;
-    height: 80%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0; */
+}
+.bottom {
+    display: flex; /* 使用 flexbox 布局 */
+    width: 100%;   /* 使两个 div 并排的容器宽度为 100% */
+}
+.content-blog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
     transform: translate(-50%, -50%);
     z-index: 2;
     text-align: center;
@@ -54,9 +72,9 @@ p {
 }
 #blog {
     margin-top: 50px;
-    width: 80%;
-    max-width: 800px;
-    height: 40vh;
+    width: 50%;
+    /* max-width: 800px; */
+    height: 100%;
     overflow-y: auto;
     /* border: 1px solid #0f0; */
     padding: 20px;
@@ -64,6 +82,52 @@ p {
     text-align: left;
     display: inline-block;
 }
+
+#tool {
+    margin-top: 50px;
+    width: 50%;
+    /* max-width: 800px; */
+    height: 100%;
+    overflow-y: auto;
+    /* border: 1px solid #0f0; */
+    padding: 20px;
+    /* background-color: rgba(0, 10, 0, 0.7); */
+    text-align: center;
+    display: inline-block;
+}
+
+#tool h2, #tool h3 {
+    color: #e1e8eb;
+    text-align: center;
+    /* text-shadow: 0 0 5px #0f0; */
+}
+
+#tool a {
+    color: #b6c2ce;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#tool a:hover {
+    /* text-decoration: underline; */
+    text-shadow: 0 0 5px #0f0;
+}
+
+#introduction {
+    margin-top: 50px;
+    width: 100%;
+    /* max-width: 800px; */
+    /* height: 30%; */
+    /* overflow-y: auto; */
+    /* border: 1px solid #0f0; */
+    padding: 20px;
+    /* background-color: rgba(0, 10, 0, 0.7); */
+    text-align: center;
+    /* display: inline-block; */
+}
+
 /* Custom scrollbar for tech feel */
 #blog::-webkit-scrollbar {
     width: 10px;
@@ -72,12 +136,9 @@ p {
     background: #5ef35e;
 }
 
-#blog h1 {
-    color: #e1e8eb;
-    font-size: 1.2em;
-}
 #blog h2, #blog h3 {
     color: #e1e8eb;
+    text-align: center;
     /* text-shadow: 0 0 5px #0f0; */
 }
 #blog a {
@@ -103,4 +164,31 @@ p {
 #back-button:hover {
     /* text-decoration: underline; */
     text-shadow: 0 0 5px #0f0;
+}
+
+.clock {
+  margin: 32px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff8800;
+  /* background: #fff; */
+  border-radius: 16px;
+  /* box-shadow: 0 4px 24px rgba(255,136,0,0.08); */
+  width: max-content;
+  padding: 18px 36px;
+  letter-spacing: 0.15em;
+  user-select: none;
+}
+.clock span {
+  min-width: 2ch;
+  display: inline-block;
+  text-align: center;
+}
+.clock .colon {
+  color: #aaa;
+  margin: 0 0.1em;
 }

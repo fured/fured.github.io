@@ -5,21 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FURED</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23ff8800'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-size='32' font-family='Orbitron,Arial,sans-serif' font-weight='bold' fill='white'%3EFR%3C/text%3E%3C/svg%3E">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="particles-js"></div>
-    <div class="content">
-        <h1>FURED BLOG</h1>
-        <p>Don't forget your dreams about literature, about love, and about traveling across the world.</p>
-        <div id="blog">
-            <div id="blog-nav">
-                <!-- <h2>Blog Posts</h2> -->
-                <div id="post-list"></div>
+    <div class="content">    
+        <div id="introduction">
+            <h1>FURED HOMEPAGE</h1>
+            <p>Don't forget your dreams about literature, about love, and about traveling across the world.</p>
+        </div>
+        <div class="bottom">        
+            <div id="blog">
+                <div id="blog-nav">
+                    <h2>Blog Posts</h2>
+                    <div id="post-list"></div>
+                </div>
             </div>
-            <div id="post-view" style="display:none;">
-                <span id="back-button">&lt; Back to list</span>
-                <div id="markdown-content"></div>
+            <div id="tool">
+                <div id="blog-nav">
+                    <h2>Tool Board</h2>
+                    <div class="clock" id="clock">
+                        <span id="h">00</span><span class="colon">:</span>
+                        <span id="m">00</span><span class="colon">:</span>
+                        <span id="s">00</span>
+                    </div>
+                    <a href="https://www.bejson.com/convert/unix/" target="_blank" rel="noopener noreferrer">Date Convert</a>
+                </div>
             </div>
         </div>
     </div>
@@ -27,8 +39,18 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
 
     <script src="js/particles.min.js"></script>
-    <script src="js/marked.min.js"></script>
-    <script src="js/purify.min.js"></script>
     <script src="js/app.js"></script>
+
+    <script>
+        function pad(n) { return n.toString().padStart(2, '0'); }
+        function updateClock() {
+        const now = new Date();
+        document.getElementById('h').textContent = pad(now.getHours());
+        document.getElementById('m').textContent = pad(now.getMinutes());
+        document.getElementById('s').textContent = pad(now.getSeconds());
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
 </body>
 </html>

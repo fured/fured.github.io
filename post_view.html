@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FURED</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23ff8800'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-size='32' font-family='Orbitron,Arial,sans-serif' font-weight='bold' fill='white'%3EFR%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content-blog">
+        <div id="blog">
+            <div id="post-view">
+                <div id="markdown-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/marked.min.js"></script>
+    <script src="js/purify.min.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const postFile = urlParams.get('file');
+        const markdownContentDiv = document.getElementById('markdown-content');
+
+        async function loadPost() {
+            try {
+                const response = await fetch(`posts/${postFile}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const markdown = await response.text();
+                const sanitizedHtml = DOMPurify.sanitize(marked.parse(markdown));
+                markdownContentDiv.innerHTML = sanitizedHtml;
+            } catch (error) {
+                console.error("Error loading post:", error);
+                markdownContentDiv.innerHTML = "<p>Error: Could not load post.</p>";
+            }
+        }
+
+    loadPost();
+    </script>
+</body>
+</html>
