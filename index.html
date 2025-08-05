@@ -10,50 +10,39 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    <div class="content">    
-        <div id="introduction">
-            <h1>FURED HOMEPAGE</h1>
-            <p>Don't forget your dreams about literature, about love, and about traveling across the world.</p>
-        </div>
-        <div class="bottom">        
-            <div id="blog">
-                <div id="blog-nav">
-                    <h2 style="text-align: center;">Blog Posts</h2>
-                    <div id="post-list"></div>
+    <div id="sections">
+        <section class="section" id="introduction">
+            <nav class="index-nav">
+                <div>
+                    <a href="#introduction" class="fr">FURED</a>
                 </div>
-            </div>
-            <div id="tool">
-                <div id="blog-nav">
-                    <h2>Tool Board</h2>
-                    <div class="clock" id="clock">
-                        <span id="h">00</span><span class="colon">:</span>
-                        <span id="m">00</span><span class="colon">:</span>
-                        <span id="s">00</span>
-                    </div>
-                    <a href="https://www.bejson.com/convert/unix/" target="_blank" rel="noopener noreferrer">Date Convert</a>
-                    <a href="https://blog.csdn.net/fured?type=blog" target="_blank" rel="noopener noreferrer">CSDN Blog</a>
+                <div style="display: flex; gap: 24px; margin-left: auto;">
+                    <a href="#introduction" data-target="introduction">HOME</a>
+                    <a href="#blog" data-target="blog">BLOG</a>
+                    <a href="#tool" data-target="tool">TOOL&SHARE</a>
                 </div>
+            </nav>
+            <p>𝕯𝖔𝖓'𝖙 𝖋𝖔𝖗𝖌𝖊𝖙 𝖞𝖔𝖚𝖗 𝖉𝖗𝖊𝖆𝖒𝖘 𝖆𝖇𝖔𝖚𝖙 𝖑𝖎𝖙𝖊𝖗𝖆𝖙𝖚𝖗𝖊, 𝖆𝖇𝖔𝖚𝖙 𝖑𝖔𝖛𝖊, </p>
+            <p>𝖆𝖓𝖉 𝖆𝖇𝖔𝖚𝖙 𝖙𝖗𝖆𝖛𝖊𝖑𝖎𝖓𝖌 𝖆𝖈𝖗𝖔𝖘𝖘 𝖙𝖍𝖊 𝖜𝖔𝖗𝖑𝖉.</p>
+            <!-- <p>Don't forget your dreams about literature, about love, and about traveling across the world.</p> -->
+        </section>
+        <section class="section" id="blog">
+                <div id="post-list"></div>
+        </section>
+        <section class="section" id="tool">
+            <div class="clock" id="clock">
+                <span id="h">00</span><span class="colon">:</span>
+                <span id="m">00</span><span class="colon">:</span>
+                <span id="s">00</span>
             </div>
-        </div>
+            <a href="https://www.bejson.com/convert/unix/" target="_blank" rel="noopener noreferrer">Date Convert</a>
+            <a href="https://blog.csdn.net/fured?type=blog" target="_blank" rel="noopener noreferrer">CSDN Blog</a>
+        </section>
     </div>
     <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
 
     <script src="js/particles.min.js"></script>
     <script src="js/app.js"></script>
-
-    <script>
-        function pad(n) { 
-            return n.toString().padStart(2, '0'); 
-        }
-        function updateClock() {
-            const now = new Date();
-            document.getElementById('h').textContent = pad(now.getHours());
-            document.getElementById('m').textContent = pad(now.getMinutes());
-            document.getElementById('s').textContent = pad(now.getSeconds());
-        }
-        updateClock();
-        setInterval(updateClock, 1000);
-    </script>
 </body>
 </html>

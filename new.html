@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FURED</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23ff8800'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-size='32' font-family='Orbitron,Arial,sans-serif' font-weight='bold' fill='white'%3EFR%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+        .section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            scroll-snap-align: start;
+        }
+        #sections {
+            scroll-snap-type: y mandatory;
+            height: 100vh;
+            width: 100%;
+            overflow-y: scroll;
+            scrollbar-width: none; /* Firefox */
+        }
+        #sections::-webkit-scrollbar {
+            display: none; /* Chrome/Safari/Edge */
+        }
+        /* 保持原有样式兼容 */
+        /* #particles-js { position: fixed; width: 100vw; height: 100vh; z-index: -1; } */
+        /* 你可以根据需要调整下面的样式 */
+        #particles-js { 
+            position: fixed; 
+            width: 100%; 
+            height: 100vh; 
+            left: 0; 
+            top: 0; 
+            z-index: -1; 
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="sections">
+        <section class="section">
+            <h1>FURED HOMEPAGE</h1>
+            <p>Don't forget your dreams about literature, about love, and about traveling across the world.</p>
+        </section>
+        <section class="section">
+            <div id="blog-nav">
+                <h2 style="text-align: center;">Blog Posts</h2>
+                <div id="post-list"></div>
+            </div>
+        </section>
+        <section class="section">
+            <div id="blog-nav">
+                <h2>Tool Board</h2>
+                <div class="clock" id="clock">
+                    <span id="h">00</span><span class="colon">:</span>
+                    <span id="m">00</span><span class="colon">:</span>
+                    <span id="s">00</span>
+                </div>
+                <a href="https://www.bejson.com/convert/unix/" target="_blank" rel="noopener noreferrer">Date Convert</a>
+                <a href="https://blog.csdn.net/fured?type=blog" target="_blank" rel="noopener noreferrer">CSDN Blog</a>
+            </div>
+        </section>
+    </div>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function pad(n) { 
+            return n.toString().padStart(2, '0'); 
+        }
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('h').textContent = pad(now.getHours());
+            document.getElementById('m').textContent = pad(now.getMinutes());
+            document.getElementById('s').textContent = pad(now.getSeconds());
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>

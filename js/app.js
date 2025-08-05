@@ -70,11 +70,11 @@ particlesJS('particles-js', {
         }
     },
     "interactivity": {
-        "detect_on": "canvas",
+        "detect_on": "window",
         "events": { 
             "onhover": { 
                 "enable": true, 
-                "mode": "repulse" 
+                "mode": "grab" 
             }, 
             "onclick": { 
                 "enable": true, 
@@ -94,3 +94,44 @@ particlesJS('particles-js', {
     },
     "retina_detect": true
 });
+
+// scroll to section functionality
+function highlightNav() {
+    const sections = document.querySelectorAll('.section');
+    let currentSection = '';
+
+    const containerRect = sectionsContainer.getBoundingClientRect();
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top - containerRect.top <= containerRect.height / 2 &&
+            rect.bottom - containerRect.top > containerRect.height / 2) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    document.querySelectorAll('.index-nav a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('data-target') === currentSection) {
+            link.classList.add('active');
+        }
+    });
+}
+
+const sectionsContainer = document.getElementById('sections');
+sectionsContainer.addEventListener('scroll', highlightNav);
+
+// 页面加载时也执行一次，确保HOME被点亮
+document.addEventListener('DOMContentLoaded', highlightNav);
+
+// Clock functionality
+function pad(n) { 
+    return n.toString().padStart(2, '0'); 
+}
+function updateClock() {
+    const now = new Date();
+    document.getElementById('h').textContent = pad(now.getHours());
+    document.getElementById('m').textContent = pad(now.getMinutes());
+    document.getElementById('s').textContent = pad(now.getSeconds());
+}
+updateClock();
+setInterval(updateClock, 1000);
