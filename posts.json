@@ -1,12 +1,21 @@
 [
     {
+        "title": "记一次山西五台上徒步",
+        "tags": ["五台山", "徒步"],
+        "file": "hikingOfWutaishan.md",
+        "date": "2025-08-05",
+        "description": "记录一次在山西五台山的徒步经历和行程安排"
+    },
+    {
         "title": "Shell脚本技巧",
+        "tags": ["技术", "shell"],
         "file": "shell.md",
         "date": "2025-08-04",
         "description": "一些shell脚本的技巧和用法"
     },
     {
         "title": "My First Blog Post",
+        "tags": ["initial"],
         "file": "first-post.md",
         "date": "2025-08-04",
         "description": "This is the first post  on my blog"
