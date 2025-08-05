@@ -157,13 +157,29 @@ function pad(n) {
     return n.toString().padStart(2, '0'); 
 }
 function updateClock() {
+    // Time: build the web 
+    const start = new Date('2025-08-04T10:47:20');
     const now = new Date();
-    document.getElementById('year').textContent = pad(now.getFullYear());
-    document.getElementById('month').textContent = pad(now.getMonth());
-    document.getElementById('day').textContent = pad(now.getDay());
-    document.getElementById('h').textContent = pad(now.getHours());
-    document.getElementById('m').textContent = pad(now.getMinutes());
-    document.getElementById('s').textContent = pad(now.getSeconds());
+    // document.getElementById('year').textContent = pad(now.getFullYear());
+    // document.getElementById('month').textContent = pad(now.getMonth());
+    // document.getElementById('day').textContent = pad(now.getDay());
+    // document.getElementById('h').textContent = pad(now.getHours());
+    // document.getElementById('m').textContent = pad(now.getMinutes());
+    // document.getElementById('s').textContent = pad(now.getSeconds());
+
+    let diff = Math.floor((now - start) / 1000); // 秒差
+
+    const days = Math.floor(diff / (24 * 3600));
+    diff %= 24 * 3600;
+    const hours = Math.floor(diff / 3600);
+    diff %= 3600;
+    const minutes = Math.floor(diff / 60);
+    const seconds = diff % 60;
+    // 展示建站时间
+    document.getElementById('day').textContent = days;
+    document.getElementById('h').textContent = pad(hours);
+    document.getElementById('m').textContent = pad(minutes);
+    document.getElementById('s').textContent = pad(seconds);
 }
 updateClock();
 setInterval(updateClock, 1000);
