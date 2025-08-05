@@ -241,24 +241,27 @@ h1 {
     align-items: center;
     text-align: center;
     top: 15px;
-    left: 15%;
+    /* left: 15%; */
+    width: 100%;
+    padding: 0 5vw;   /* 新增，左右各留5%的宽度 */
+    box-sizing: border-box; /* 确保padding不撑大宽度 */
 }
 
 .index-nav a {
-    position: relative;
+    position: static;
     margin: 0 12px;
     text-decoration: none;
     color: #8ad4f3;
     /* font-weight: bold; */
     font-size: 1.2em;
-    left: 350%;
+    /* left: 350%; */
 }
 
 .index-nav a.fr {
-    position: relative;
+    position: static;
     font-size: 1.5em;
     color: #5ac4f1;
-    left: 10%;
+    /* left: 10%; */
     font-weight: bold;
 }
 
