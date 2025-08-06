@@ -1,6 +1,13 @@
 [
     {
-        "title": "记一次山西五台上徒步",
+        "title": "记一次麦理浩径海岸线徒步",
+        "tags": ["香港", "麦理浩径", "徒步"],
+        "file": "macLehose_trail.md",
+        "date": "2025-08-06",
+        "description": "记录一次在香港麦理浩径的徒步经历"
+    },
+    {
+        "title": "记一次山西五台山徒步",
         "tags": ["五台山", "徒步"],
         "file": "hikingOfWutaishan.md",
         "date": "2025-08-05",
