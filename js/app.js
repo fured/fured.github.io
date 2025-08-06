@@ -1,6 +1,3 @@
-// Particles.js setup
-particlesJS('particles-js', { /* ... existing particles config ... */ });
-
 document.addEventListener('DOMContentLoaded', () => {
     const blogNav = document.getElementById('blog-nav');
     const postList = document.getElementById('post-list');
