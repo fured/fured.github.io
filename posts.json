@@ -1,30 +1,28 @@
-[
-    {
+{
+    "macLehose_trail.md": {
         "title": "记一次麦理浩径海岸线徒步",
-        "tags": ["香港", "麦理浩径", "徒步"],
-        "file": "macLehose_trail.md",
+        "tags": ["香港", "麦理浩径", "最美海岸线"],
         "date": "2025-08-06",
-        "description": "记录一次在香港麦理浩径的徒步经历"
+        "description": "徒步麦理浩径一二段的海岸线，欣赏香港最美的海岸风光"
     },
-    {
+    "hikingOfWutaishan.md": {
         "title": "记一次山西五台山徒步",
-        "tags": ["五台山", "徒步"],
-        "file": "hikingOfWutaishan.md",
+        "tags": ["五台山", "大朝台", "徒步"],
         "date": "2025-08-05",
-        "description": "记录一次在山西五台山的徒步经历和行程安排"
+        "description": "五台山大朝台徒步，体验佛教圣地的自然与文化"
     },
-    {
+    "shell.md": {
         "title": "Shell脚本技巧",
         "tags": ["技术", "shell"],
         "file": "shell.md",
         "date": "2025-08-04",
         "description": "一些shell脚本的技巧和用法"
     },
-    {
+    "first-post.md": {
         "title": "My First Blog Post",
         "tags": ["initial"],
         "file": "first-post.md",
         "date": "2025-08-04",
         "description": "This is the first post  on my blog"
     }
-]
+}

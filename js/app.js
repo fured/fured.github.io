@@ -10,41 +10,44 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const posts = await response.json();
             postList.innerHTML = ''; // Clear existing list
-            posts.forEach(post => {
-                // 创建外层容器
-                const postItem = document.createElement('div');
-                postItem.className = 'post-item';
+            for (let key in posts) {
+                if (posts.hasOwnProperty(key)) {
+                    const post = posts[key];
+                    // 创建外层容器
+                    const postItem = document.createElement('div');
+                    postItem.className = 'post-item';
 
-                // 第一行：日期+标题（带链接）
-                const titleLine = document.createElement('div');
-                titleLine.className = 'post-title-line';
-                const link = document.createElement('a');
-                link.href = 'post_view.html?file=' + encodeURIComponent(post.file);
-                link.textContent = `${post.date} - ${post.title}`;
-                titleLine.appendChild(link);
-                // tags 紧跟标题
-                if (Array.isArray(post.tags)) {
-                    const tagsSpan = document.createElement('span');
-                    tagsSpan.className = 'post-tags-inline';
-                    post.tags.forEach(tag => {
-                        const tagSpan = document.createElement('span');
-                        tagSpan.className = 'post-tag';
-                        tagSpan.textContent = tag;
-                        tagsSpan.appendChild(tagSpan);
-                    });
-                    titleLine.appendChild(tagsSpan);
+                    // 第一行：日期+标题（带链接）
+                    const titleLine = document.createElement('div');
+                    titleLine.className = 'post-title-line';
+                    const link = document.createElement('a');
+                    link.href = 'post_view.html?file=' + encodeURIComponent(key);
+                    link.textContent = `${post.date} - ${post.title}`;
+                    titleLine.appendChild(link);
+                    // tags 紧跟标题
+                    if (Array.isArray(post.tags)) {
+                        const tagsSpan = document.createElement('span');
+                        tagsSpan.className = 'post-tags-inline';
+                        post.tags.forEach(tag => {
+                            const tagSpan = document.createElement('span');
+                            tagSpan.className = 'post-tag';
+                            tagSpan.textContent = tag;
+                            tagsSpan.appendChild(tagSpan);
+                        });
+                        titleLine.appendChild(tagsSpan);
+                    }
+
+                    // 第二行：描述
+                    const descLine = document.createElement('div');
+                    descLine.className = 'post-desc-line';
+                    descLine.textContent = post.description;
+
+                    // 组装
+                    postItem.appendChild(titleLine);
+                    postItem.appendChild(descLine);
+                    postList.appendChild(postItem);
                 }
-
-                // 第二行：描述
-                const descLine = document.createElement('div');
-                descLine.className = 'post-desc-line';
-                descLine.textContent = post.description;
-
-                // 组装
-                postItem.appendChild(titleLine);
-                postItem.appendChild(descLine);
-                postList.appendChild(postItem);
-            });
+            }
         } catch (error) {
             console.error("Error loading post index:", error);
             postList.innerHTML = "<p>Could not load blog posts.</p>";

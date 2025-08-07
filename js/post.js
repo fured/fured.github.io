@@ -85,6 +85,32 @@ const md = window.markdownit({
 
 async function loadPost() {
     try {
+        if (!postFile) {
+            markdownContentDiv.innerHTML = "<p>Error: No post file specified.</p>";
+            return;
+        }
+
+        const resp = await fetch('posts.json');
+            if (!resp.ok) {
+            throw new Error(`HTTP error! status: ${resp.status}`);
+        }
+        const posts = await resp.json();
+        if (posts.hasOwnProperty(postFile)) {
+            const post = posts[postFile];
+            document.title = post.title || "FURED Blog Post";
+            
+            const metaDescription = document.createElement('meta');
+            metaDescription.name = "description";
+            metaDescription.content = post.description || "FURED Blog Post";
+            document.head.appendChild(metaDescription);
+
+            const metaKeywords = document.createElement('meta');
+            metaKeywords.name = "keywords";
+            metaKeywords.content = post.tags ? post.tags.join(', ') : "FURED Blog Post Tags";
+            document.head.appendChild(metaKeywords);
+        }
+
+
         const response = await fetch(`posts/${postFile}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
