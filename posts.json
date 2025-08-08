@@ -3,26 +3,30 @@
         "title": "记一次麦理浩径海岸线徒步",
         "tags": ["香港", "麦理浩径", "最美海岸线"],
         "date": "2025-08-06",
-        "description": "徒步麦理浩径一二段的海岸线，欣赏香港最美的海岸风光"
+        "description": "徒步麦理浩径一二段的海岸线，欣赏香港最美的海岸风光",
+        "metaDesc": "2025年1月，独自徒步麦理浩径一二段及破边洲，体验香港最美的海岸线。沿途风景如画，感受大自然的魅力。"
     },
     "hikingOfWutaishan.md": {
-        "title": "记一次山西五台山徒步",
+        "title": "记一次山西五台山大朝台徒步",
         "tags": ["五台山", "大朝台", "徒步"],
         "date": "2025-08-05",
-        "description": "五台山大朝台徒步，体验佛教圣地的自然与文化"
+        "description": "五台山大朝台徒步，体验佛教圣地的自然与文化",
+        "metaDesc": "2024年5月，和朋友一起徒步五台山大朝台，体验这座佛教圣地的自然风光和文化底蕴。"
     },
     "shell.md": {
         "title": "Shell脚本技巧",
         "tags": ["技术", "shell"],
         "file": "shell.md",
         "date": "2025-08-04",
-        "description": "一些shell脚本的技巧和用法"
+        "description": "一些shell脚本的技巧和用法",
+        "metaDesc": "结合实际工作，持续总结和输出Shell脚本技巧和用法，帮助提升工作效率。"
     },
     "first-post.md": {
         "title": "My First Blog Post",
         "tags": ["initial"],
         "file": "first-post.md",
         "date": "2025-08-04",
-        "description": "This is the first post  on my blog"
+        "description": "This is the first post  on my blog",
+        "metaDesc": "Welcome to my blog! This is my first post where I share my thoughts and experiences."
     }
 }

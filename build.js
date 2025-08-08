@@ -118,11 +118,11 @@ fs.readFile('home.html', 'utf8', (err, html) => {
                         const markdownContentDiv = postDocument.getElementById('markdown-content');
 
                         // 设置标题
-                        postDocument.title = post.title || "FURED Blog Post";
+                        postDocument.title = `${post.title}:${post.description}` || "FURED Blog Post";
                 
                         const metaDescription = postDocument.createElement('meta');
                         metaDescription.name = "description";
-                        metaDescription.content = post.description || "FURED Blog Post";
+                        metaDescription.content = post.metaDesc || "FURED Blog Post";
                         postDocument.head.appendChild(metaDescription);
 
                         const metaKeywords = postDocument.createElement('meta');
@@ -135,7 +135,7 @@ fs.readFile('home.html', 'utf8', (err, html) => {
                         markdownContentDiv.innerHTML = sanitizedHtml;
 
                         // 保存新的子页 HTML
-                        fs.writeFile(`deployment/${postURL}`, postDom.serialize(), (err) => {
+                        fs.writeFile(`docs/${postURL}`, postDom.serialize(), (err) => {
                             if (err) {
                                 console.error(`gen post page: ${postURL} fail:`, err);
                             } else {
@@ -151,7 +151,7 @@ fs.readFile('home.html', 'utf8', (err, html) => {
         const newHtml = dom.serialize();
 
         // 将新的 HTML 保存到文件
-        fs.writeFile('deployment/index.html', newHtml, (err) => {
+        fs.writeFile('docs/index.html', newHtml, (err) => {
             if (err) {
                 console.error('gen home page: index.html fail: ', err);
             } else {

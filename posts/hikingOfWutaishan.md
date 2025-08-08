@@ -1,6 +1,9 @@
 # 五台山徒步
 *Published on: 2025-08-05*
-*Updated on: 2025-08-06*
+
+出行时间：2024.05.01-05.03
+
+推荐指数：⭐⭐⭐⭐
 
 ## 1 准备
 ### 1.1 认识五台山
@@ -71,7 +74,7 @@ Day3：吉祥寺 --> 狮子窝 --> 南台普济寺 --> 宽滩村 （30KM）
 
 五月份植被还没完全长出来，总体风景一般，要是6、7、8月去，风景应该更好
 
-<img src="/images/680c498.jpg" title="大大大" width="49%"/>
-<img src="/images/8a319c7f.jpg" title="广阔的风光" width="49%"/>
-<img src="/images/c30b1060.jpg" title="旅途伙伴" width="49%"/>
-<img src="/images/9daed952.jpg" title="回程路过笔架山" width="49%"/>
+<img src="/images/680c498.jpg" title="大大大" alt="五台山上人形大" width="49%"/>
+<img src="/images/8a319c7f.jpg" title="广阔的风光" alt="广阔的风光" width="49%"/>
+<img src="/images/c30b1060.jpg" title="旅途伙伴" alt="徒步旅途伙伴" width="49%"/>
+<img src="/images/9daed952.jpg" title="回程路过笔架山" alt="回程路过笔架山" width="49%"/>

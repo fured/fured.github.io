@@ -1,6 +1,10 @@
 # 麦理浩径徒步
 *Published on: 2025-08-06*
 
+出行时间：2025.01.23-01.24
+
+推荐指数：⭐⭐⭐⭐⭐
+
 ## 1 介绍
 
 麦理浩径（MacLehose Trail）是香港最长、最著名的远足径之一，它以香港前任总督 **麦理浩爵士（Sir Murray MacLehose）** 的名字命名，他在任期间大力推动香港郊野公园制度的建立，提倡环保与市民亲近大自然。于是，香港郊野事务署整合、修缮、规划了原有路径，在新界东至西设立了这条贯穿全港的 **100公里远足径**，并以麦理浩的名字命名，以示纪念。
@@ -60,25 +64,25 @@ Day2: 浪茄湾  --> 西湾  --> 咸田湾  --> 赤经  --> 北潭凹  --> 沙�
 
 <img src="/images/IMG_7138.png" width="49%" title="万宜水库不知名建筑" alt="万宜水库">
 
-<img src="/images/IMG_7141.png" width="49%" title="破边洲入口">
+<img src="/images/IMG_7141.png" width="49%" title="破边洲入口" alt="破边洲入口">
 
-<img src="/images/IMG_7142.png" width="49%" title="遥望万宜水库东坝">
+<img src="/images/IMG_7142.png" width="49%" title="遥望万宜水库东坝" alt="遥望万宜水库东坝">
 
-<img src="/images/IMG_7157.png" width="49%" title="破边洲">
+<img src="/images/IMG_7157.png" width="49%" title="破边洲" alt="破边洲">
 
-<img src="/images/IMG_7161.png" width="49%" title="破边洲夕阳">
+<img src="/images/IMG_7161.png" width="49%" title="破边洲夕阳" alt="破边洲夕阳">
 
-<img src="/images/IMG_7168.png" width="49%" title="一二段交界点">
+<img src="/images/IMG_7168.png" width="49%" title="一二段交界点" alt="一二段交界点">
 
-<img src="/images/IMG_7173.png" width="49%" title="第21个路牌">
+<img src="/images/IMG_7173.png" width="49%" title="第21个路牌" alt="第21个路牌">
 
-<img src="/images/IMG_7184.png" width="49%" title="清晨的浪茄湾">
+<img src="/images/IMG_7184.png" width="49%" title="清晨的浪茄湾" alt="清晨的浪茄湾">
 
-<img src="/images/IMG_7199.png" width="49%" title="在山上看浪茄湾">
+<img src="/images/IMG_7199.png" width="49%" title="在山上看浪茄湾" alt="在山上看浪茄湾">
 
-<img src="/images/IMG_7207.png" width="49%" title="西湾营地">
+<img src="/images/IMG_7207.png" width="49%" title="西湾营地" alt="西湾营地">
 
-<img src="/images/IMG_7213.png" width="49%" title="咸田湾">
+<img src="/images/IMG_7213.png" width="49%" title="咸田湾" alt="咸田湾">
 
-<img src="/images/IMG_7225.png" width="49%" title="二三段交界点">
+<img src="/images/IMG_7225.png" width="49%" title="二三段交界点" alt="二三段交界点">
 
