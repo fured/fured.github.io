@@ -11,6 +11,6 @@ node build.js
 ```
 ## 2 本地调试
 ```python
-cd deployment
+cd docs
 python3 -m http.server 9000
 ```
