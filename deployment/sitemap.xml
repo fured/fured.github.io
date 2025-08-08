@@ -5,31 +5,31 @@
         http://www.sitemaps.org/schemas/sitemap-image/1.1/sitemap-image.xsd">
     <url>
         <loc>https://fured.github.io/</loc>
-        <lastmod>2025-08-07</lastmod>
+        <lastmod>2025-08-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fured.github.io/post_view.html?file=hikingOfWutaishan.md</loc>
-        <lastmod>2025-08-07</lastmod>
+        <loc>https://fured.github.io/posts/hikingOfWutaishan.html</loc>
+        <lastmod>2025-08-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://fured.github.io/post_view.html?file=macLehose_trail.md</loc>
-        <lastmod>2025-08-07</lastmod>
+        <loc>https://fured.github.io/posts/macLehose_trail.html</loc>
+        <lastmod>2025-08-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://fured.github.io/post_view.html?file=shell.md</loc>
-        <lastmod>2025-08-07</lastmod>
+        <loc>https://fured.github.io/posts/shell.html</loc>
+        <lastmod>2025-08-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://fured.github.io/post_view.html?file=first-post.md</loc>
-        <lastmod>2025-08-07</lastmod>
+        <loc>https://fured.github.io/posts/first-post.html</loc>
+        <lastmod>2025-08-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>

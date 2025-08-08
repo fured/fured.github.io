@@ -65,13 +65,13 @@ Day3：吉祥寺 --> 狮子窝 --> 南台普济寺 --> 宽滩村 （30KM）
 
 > 【注意】到了普济寺，往宽滩村走的路，我们走错了，导致走进了五台山景区里面
 
-<img src="posts/images/752abc0d.jpg" title="轨迹图" alt="路线" width="50%"/>
+<img src="/images/752abc0d.jpg" title="轨迹图" alt="路线" width="50%"/>
 
 ## 3 风景
 
 五月份植被还没完全长出来，总体风景一般，要是6、7、8月去，风景应该更好
 
-<img src="posts/images/680c498.jpg" title="大大大" width="49%"/>
-<img src="posts/images/8a319c7f.jpg" title="广阔的风光" width="49%"/>
-<img src="posts/images/c30b1060.jpg" title="旅途伙伴" width="49%"/>
-<img src="posts/images/9daed952.jpg" title="回程路过笔架山" width="49%"/>
+<img src="/images/680c498.jpg" title="大大大" width="49%"/>
+<img src="/images/8a319c7f.jpg" title="广阔的风光" width="49%"/>
+<img src="/images/c30b1060.jpg" title="旅途伙伴" width="49%"/>
+<img src="/images/9daed952.jpg" title="回程路过笔架山" width="49%"/>

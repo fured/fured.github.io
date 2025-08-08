@@ -50,35 +50,35 @@ Day2: 浪茄湾  --> 西湾  --> 咸田湾  --> 赤经  --> 北潭凹  --> 沙�
 
 **我只走了一二段，总共30km**，属于**海岸线精华**路段，整体海岸风光巨美。
 
-<img src="posts/images/IMG_8112.PNG" width="49%" title="总体线路图" alt="线路图">
+<img src="/images/IMG_8112.PNG" width="49%" title="总体线路图" alt="线路图">
 
 ## 3 所见
 
-<img src="posts/images/IMG_7133.png" width="49%" title="麦理浩径起点" alt="起点">
+<img src="/images/IMG_7133.png" width="49%" title="麦理浩径起点" alt="起点">
 
-<img src="posts/images/IMG_7136.png" width="49%" title="万宜水库" alt="万宜水库">
+<img src="/images/IMG_7136.png" width="49%" title="万宜水库" alt="万宜水库">
 
-<img src="posts/images/IMG_7138.png" width="49%" title="万宜水库不知名建筑" alt="万宜水库">
+<img src="/images/IMG_7138.png" width="49%" title="万宜水库不知名建筑" alt="万宜水库">
 
-<img src="posts/images/IMG_7141.png" width="49%" title="破边洲入口">
+<img src="/images/IMG_7141.png" width="49%" title="破边洲入口">
 
-<img src="posts/images/IMG_7142.png" width="49%" title="遥望万宜水库东坝">
+<img src="/images/IMG_7142.png" width="49%" title="遥望万宜水库东坝">
 
-<img src="posts/images/IMG_7157.png" width="49%" title="破边洲">
+<img src="/images/IMG_7157.png" width="49%" title="破边洲">
 
-<img src="posts/images/IMG_7161.png" width="49%" title="破边洲夕阳">
+<img src="/images/IMG_7161.png" width="49%" title="破边洲夕阳">
 
-<img src="posts/images/IMG_7168.png" width="49%" title="一二段交界点">
+<img src="/images/IMG_7168.png" width="49%" title="一二段交界点">
 
-<img src="posts/images/IMG_7173.png" width="49%" title="第21个路牌">
+<img src="/images/IMG_7173.png" width="49%" title="第21个路牌">
 
-<img src="posts/images/IMG_7184.png" width="49%" title="清晨的浪茄湾">
+<img src="/images/IMG_7184.png" width="49%" title="清晨的浪茄湾">
 
-<img src="posts/images/IMG_7199.png" width="49%" title="在山上看浪茄湾">
+<img src="/images/IMG_7199.png" width="49%" title="在山上看浪茄湾">
 
-<img src="posts/images/IMG_7207.png" width="49%" title="西湾营地">
+<img src="/images/IMG_7207.png" width="49%" title="西湾营地">
 
-<img src="posts/images/IMG_7213.png" width="49%" title="咸田湾">
+<img src="/images/IMG_7213.png" width="49%" title="咸田湾">
 
-<img src="posts/images/IMG_7225.png" width="49%" title="二三段交界点">
+<img src="/images/IMG_7225.png" width="49%" title="二三段交界点">
 
