@@ -5,6 +5,7 @@
 # 安装库
 npm install jsdom
 npm install markdown-it prismjs dompurify
+npm install markdown-it-anchor markdown-it-toc-done-right
 
 # 生成html
 node build.js
@@ -14,3 +15,6 @@ node build.js
 cd docs
 python3 -m http.server 9000
 ```
+
+## 3 PLAN
+徒步blog 在toc下面增加两步路轨迹链接

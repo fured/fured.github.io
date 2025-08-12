@@ -24,7 +24,7 @@ body {
 #post-view {
     position: absolute;
     top: 10%;
-    left: 20%;
+    left: 29.5%;
     width: 60%;
     /* height: 100%; */
     /* transform: translate(-50%, -50%); */
@@ -37,6 +37,33 @@ body {
     padding: 32px 36px;      /* 新增：上下32px，左右36px页边距 */
     border-radius: 18px;     /* 新增：圆角 */
     box-shadow: 0 4px 32px rgba(0,0,0,0.12); /* 可选：阴影 */
+}
+
+#toc-view {
+    position: fixed;
+    top: 10%;
+    left: 9%;
+    width: 16%;
+    /* height: 100%; */
+    /* transform: translate(-50%, -50%); */
+    z-index: 2;
+    text-align: left;
+    align-items: left;
+    background-color: #c9d1d9;
+    color: #0d1117;
+    /* text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0; */
+    padding: 32px 36px;      /* 新增：上下32px，左右36px页边距 */
+    border-radius: 18px;     /* 新增：圆角 */
+    box-shadow: 0 4px 32px rgba(0,0,0,0.12); /* 可选：阴影 */
+    font-family: 'Consolas', 'Roboto Mono', 'Menlo', monospace;
+    font-size: 1.08em;
+}
+
+#toc-view a {
+    text-decoration: none; /* 去掉下划线 */
+    color: #3182ce; /* 链接颜色 */
+    transition: color 0.3s ease; /* 添加过渡效果 */
+    font-weight: bold; /* 加粗链接文本 */
 }
 
 /*  屏幕宽度小于等于600px时应用的样式 */
@@ -122,4 +149,8 @@ body {
 img {
     max-width: 100%; /* 使图片自适应容器宽度 */
     height: auto;    /* 保持比例 */
+}
+
+.list-item {
+    display: block;
 }

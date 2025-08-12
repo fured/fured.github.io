@@ -1,6 +1,8 @@
 # My First Blog Post
 *Published on: 2025-08-04*
 
+[toc]
+
 This is my first post on my new blog! I can write in **Markdown**.
 
 - List item 1
@@ -16,8 +18,6 @@ greet();
 ```
 
 ## 夕阳
-![夕阳1](posts/images/3dba94be.jpg)
-
 <img src="/images/3dba94be.jpg" alt="夕阳2" width="300" height="200"/>
 
 <img src="/images/3dba94be.jpg" alt="夕阳3" width="50%"/>
