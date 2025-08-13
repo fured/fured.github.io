@@ -1,13 +1,13 @@
 body {
     background-color: #0d1117;
-    color: #c9d1d9;
-    font-family: 'Roboto Mono', monospace;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    display: flex;
-    height: auto;
-    /* overflow: hidden; */
+    display: flex; /* 启用 Flexbox */
+    height: 100vh; /* 使用视口高度 */
+    margin: 0; /* 去掉默认边距 */
+    padding-top: 3vh; /* 新增：顶部10%页边距 */
+    padding-bottom: 3%; /* 新增：底部10%页边距 */
+    padding-left: 12%; /* 新增：左侧26.5%页边距 */
+    overflow: hidden;
+    gap: 10px;
 }
 
 #particles-js { 
@@ -21,42 +21,60 @@ body {
     pointer-events: none;
 }
 
-#post-view {
-    position: absolute;
-    top: 10%;
-    left: 26.5%;
-    width: 60%;
-    /* height: 100%; */
-    /* transform: translate(-50%, -50%); */
-    z-index: 2;
-    text-align: left;
-    align-items: center;
-    background-color: #c9d1d9;
-    color: #0d1117;
-    /* text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0; */
-    padding: 32px 36px;      /* 新增：上下32px，左右36px页边距 */
-    border-radius: 18px;     /* 新增：圆角 */
-    box-shadow: 0 4px 32px rgba(0,0,0,0.12); /* 可选：阴影 */
+#left {
+    width: 23%; /* 固定左侧宽度 */
+    /*box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 为左侧添加阴影 */
+    display: flex; /* 左侧容器使用 Flexbox 排列内容 */
+    flex-direction: column; /* 垂直排列 */
+    justify-content: flex-start; /* 从顶部开始排列 */
 }
 
 #toc-view {
-    position: fixed;
-    top: 10%;
-    right: 74%;
-    width: 16%;
-    /* height: 100%; */
-    /* transform: translate(-50%, -50%); */
-    z-index: 2;
-    text-align: left;
-    align-items: left;
+    margin-bottom: 10px; /* 设置各项之间的间距 */
+    padding: 10px 0px 32px;
     background-color: #c9d1d9;
     color: #0d1117;
-    /* text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0; */
-    padding: 10px 0px 32px;      /* 新增：上32px，左右0px 下 32px 页边距 */
-    border-radius: 18px;     /* 新增：圆角 */
+    /*border: 1px solid #ccc; /* 边框 */
+    border-radius: 8px;     /* 新增：圆角 */
     box-shadow: 0 4px 32px rgba(0,0,0,0.12); /* 可选：阴影 */
     font-family: 'Consolas', 'Roboto Mono', 'Menlo', monospace;
     font-size: 1.08em;
+}
+
+#extend-info {
+    margin-bottom: 10px; /* 设置各项之间的间距 */
+    padding: 10px 0px 32px;
+    background-color: #c9d1d9;
+    color: #0d1117;
+    /*border: 1px solid #ccc; /* 边框 */
+    border-radius: 8px;     /* 新增：圆角 */
+    box-shadow: 0 4px 32px rgba(0,0,0,0.12); /* 可选：阴影 */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#post-view {
+    flex: 0.85; /* 右侧占满剩余空间 */
+    background-color: #c9d1d9;
+    overflow-y: auto; /* 允许垂直滚动 */
+    padding: 32px 36px;      /* 新增：上下32px，左右36px页边距 */
+    border-radius: 8px;     /* 新增：圆角 */
+    box-shadow: 0 4px 32px rgba(0,0,0,0.12); /* 可选：阴影 */
+    height: 87vh; /* 确保右侧区域满高
+    box-sizing: border-box; /* 包括内边距在内的边框盒模型 */
+    /*height: max-content; /* 允许内容高度自适应 */
+}
+
+#post-view::-webkit-scrollbar {
+    width: 12px; /* 隐藏滚动条 */
+    border-radius: 8px; 
+    /*background: transparent; /* 背景透明 */
+}
+
+#post-view::-webkit-scrollbar-thumb {
+    background-color: #396669; /* 滚动条的颜色 */
+    border-radius: 8px; /* 滚动条滑块的圆角 */
 }
 
 #toc-view a {
@@ -86,17 +104,6 @@ body {
 
 #toc-view li {
     margin: 0.5em 0; /* 设置列表项之间的间距 */
-}
-
-/*  屏幕宽度小于等于600px时应用的样式 */
-@media (max-width: 600px) {
-    #post-view {
-        top: 5%;
-        left: 2%;
-        width: 96%;
-        padding: 16px 8px;   /* 移动端更窄的页边距 */
-        border-radius: 10px;
-    }
 }
 
 #markdown-content {
@@ -175,4 +182,42 @@ img {
 
 .list-item {
     display: block;
+}
+
+.post-tags-inline {
+    margin-left: 0px;
+    align-items: center;
+    /* display: flex; */
+    /* gap: 6px; */
+}
+.post-tag {
+    display: inline-block;
+    background: #0d1117;
+    color: #cf9030;
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 0.88em;
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-bottom: 2px;
+    transition: background 0.2s;
+    align-items: center;
+}
+.post-tag:hover {
+    color: #fff;
+    /* background: rgba(235, 241, 241, 0.22); */
+}
+
+#extend-info p {
+    margin-left: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#extend-info a {
+    margin-left: 10%;
+}
+
+#extend-info a::before {
+    content: "🔗 ";
 }

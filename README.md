@@ -18,4 +18,4 @@ python3 -m http.server 9000
 
 ## 3 PLAN
 - [x] 增加目录条目点亮
-- [ ] 徒步blog 在toc下面增加两步路轨迹链接、tags、推荐指数
+- [x] 徒步blog 在toc下面增加两步路轨迹链接、tags、推荐指数

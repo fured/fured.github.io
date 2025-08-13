@@ -1,17 +1,49 @@
 {
     "macLehose_trail.md": {
         "title": "记一次麦理浩径海岸线徒步",
-        "tags": ["香港", "麦理浩径", "最美海岸线"],
+        "tags": ["香港", "麦理浩径", "最美海岸线", "徒步"],
         "date": "2025-08-06",
         "description": "徒步麦理浩径一二段的海岸线，欣赏香港最美的海岸风光",
-        "metaDesc": "2025年1月，独自徒步麦理浩径一二段及破边洲，体验香港最美的海岸线。沿途风景如画，感受大自然的魅力。"
+        "metaDesc": "2025年1月，独自徒步麦理浩径一二段及破边洲，体验香港最美的海岸线。沿途风景如画，感受大自然的魅力。",
+        "tips": [
+            "推荐指数：⭐⭐⭐⭐⭐",
+            "最佳季节: 全年"
+        ],
+        "links": [
+            {
+                "text": "麦理浩径官方介绍",
+                "url": "https://www.hiking.gov.hk/trail/info/id/VFFUbFFNOXNXTHNWU2FqT09UTjlOZz09"
+            },
+            {
+                "text": "香港徒步攻略",
+                "url": "https://www.hiking.gov.hk/"
+            },
+            {
+                "text": "两步路轨迹",
+                "url": "https://www.2bulu.com/track/t-0bR0b9YBX3zp%25252FR2KBg5Tzw%25253D%25253D.htm"
+            }
+        ]
     },
     "hikingOfWutaishan.md": {
         "title": "记一次山西五台山大朝台徒步",
         "tags": ["五台山", "大朝台", "徒步"],
         "date": "2025-08-05",
         "description": "五台山大朝台徒步，体验佛教圣地的自然与文化",
-        "metaDesc": "2024年5月，和朋友一起徒步五台山大朝台，体验这座佛教圣地的自然风光和文化底蕴。"
+        "metaDesc": "2024年5月，和朋友一起徒步五台山大朝台，体验这座佛教圣地的自然风光和文化底蕴。",
+        "tips": [
+            "推荐指数：⭐⭐⭐⭐",
+            "最佳季节: 6-8月"
+        ],
+        "links": [
+            {
+                "text": "五台山旅游官网",
+                "url": "https://www.wtsykfwzx.com/"
+            },
+            {
+                "text": "两步路轨迹",
+                "url": "https://www.2bulu.com/track/t-26jCSLMJP%25252FDp%25252FR2KBg5Tzw%25253D%25253D.htm"
+            }
+        ]
     },
     "shell.md": {
         "title": "Shell脚本技巧",

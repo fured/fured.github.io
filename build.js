@@ -88,6 +88,8 @@ async function genPostHtml(postFileName, post) {
     const postPurify = DOMPurify(postWindow); // 通过 window 对象初始化 DOMPurify
     const postDocument = postDom.window.document;
     const markdownContentDiv = postDocument.getElementById('markdown-content');
+    const extendInfodIV = postDocument.getElementById('extend-info');
+
     // 设置标题
     postDocument.title = `${post.title}:${post.description}` || "FURED Blog Post";
     // 设置元数据
@@ -100,6 +102,45 @@ async function genPostHtml(postFileName, post) {
     metaKeywords.name = "keywords";
     metaKeywords.content = post.tags ? post.tags.join(', ') : "FURED Blog Post Tags";
     postDocument.head.appendChild(metaKeywords);
+
+    let hasExtendInfo = false;
+    // 处理tips
+    if (Array.isArray(post.tips)) {
+        hasExtendInfo = true;
+        post.tips.forEach(tip => {
+            const t = postDocument.createElement('p');
+            t.textContent = tip;
+            extendInfodIV.appendChild(t);
+        });
+    }
+    // 处理links
+    if (Array.isArray(post.links)) {
+        hasExtendInfo = true;
+        post.links.forEach(link => {
+            const linkElement = postDocument.createElement('a');
+            linkElement.href = link.url;
+            linkElement.target = '_blank';
+            linkElement.rel = 'noopener noreferrer';
+            linkElement.textContent = link.text || link.url;
+            extendInfodIV.appendChild(linkElement);
+        });
+    }
+    // 处理tags
+    if (Array.isArray(post.tags)) {
+        hasExtendInfo = true;
+        const tagsSpan = postDocument.createElement('span');
+        tagsSpan.className = 'post-tags-inline';
+        post.tags.forEach(tag => {
+            const tagSpan = postDocument.createElement('span');
+            tagSpan.className = 'post-tag';
+            tagSpan.textContent = tag;
+            tagsSpan.appendChild(tagSpan);
+        });
+        extendInfodIV.appendChild(tagsSpan);
+    }
+    if (!hasExtendInfo) {
+        postDocument.remove(extendInfodIV);
+    }
 
     const html = md.render(postContent);
     const sanitizedHtml = postPurify.sanitize(html);
