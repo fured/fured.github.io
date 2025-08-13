@@ -105,7 +105,7 @@ async function genPostHtml(postFileName, post) {
     const sanitizedHtml = postPurify.sanitize(html);
     const rslt = getTOC(sanitizedHtml);
     if (rslt.tocHtml) {
-        const tocView = postDocument.getElementById('toc-view');
+        const tocView = postDocument.getElementById('toc-content');
         tocView.innerHTML = rslt.tocHtml;
     }
     markdownContentDiv.innerHTML = rslt.html;
