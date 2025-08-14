@@ -1,4 +1,0 @@
-User-agent: *
-Sitemap: https://fured.github.io/sitemap.xml
-Allow: *.js
-Allow: *.css
