@@ -135,7 +135,6 @@ h1 {
 
 #tool a {
     color: #b6c2ce;
-    text-decoration: none;
     display: block;
     margin-bottom: 10px;
     font-size: 1.2em;
@@ -320,4 +319,28 @@ h1 {
 .post-tag:hover {
     color: #fff;
     /* background: rgba(235, 241, 241, 0.22); */
+}
+
+@media screen and (max-width: 600px) {
+    #introduction {
+        padding: 0px;
+    }
+
+    #blog {
+        padding: 0px;
+    }
+
+    #tool {
+        padding: 0px;
+    }
+
+    .clock {
+        font-size: 2.5rem;
+        padding: 18px 0px;
+        letter-spacing: 0.15em;
+    }
+
+    .clock span {
+        min-width: 1ch;
+    }
 }

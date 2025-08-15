@@ -221,3 +221,28 @@ img {
 #extend-info a::before {
     content: "🔗 ";
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0px;
+        flex-direction: column;
+        overflow-y: auto;
+        height: unset;
+        gap: 0px;
+    }
+
+    #left {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    #toc-view {
+        display: none;
+    }
+
+    #post-view {
+        flex: 1;
+        padding: 0px 20px;
+        height: 100vh;
+    }
+}
