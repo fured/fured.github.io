@@ -123,3 +123,156 @@ function updateClock() {
 }
 updateClock();
 setInterval(updateClock, 1000);
+
+const cmdList = [
+    {
+        "example": "yd: It's a test",
+        "icon": "fa fa-clipboard",
+    },
+    {
+        "example": "yd: hiking",
+        "icon": "fa fa-clipboard",
+    },
+    {
+        "example": "yd: 徒步",
+        "icon": "fa fa-clipboard",
+    },
+    {
+        "example": "ts: 1755517705",
+        "icon": "fa fa-clipboard",
+    },
+    {
+        "example": "ts: now",
+        "icon": "fa fa-clipboard",
+    },
+    {
+        "example": "csdn: fured",
+        "icon": "fa fa-link",
+    },
+];
+
+
+const input = document.getElementById("command");
+const suggestionsContainer = document.getElementById("suggestions");
+
+function showSuggestions() {
+    // 生成命令建议列表
+    // const suggestionsContainer = document.getElementById("suggestions");
+    suggestionsContainer.style.display = 'block';
+    input.classList.add('active');
+    suggestionsContainer.innerHTML = ""
+    cmdList.forEach((item, index) => {
+        const suggestionItem = document.createElement("div");
+        const icon = document.createElement("i");
+        icon.setAttribute("class", item.icon);
+        suggestionItem.appendChild(icon);
+        suggestionItem.classList.add("suggestion-item");
+        if (index == cmdList.length - 1) {
+            // 最后一个元素
+            suggestionItem.classList.add("suggestion-last-item");
+        }
+        const textNode = document.createTextNode(item.example);
+        suggestionItem.appendChild(textNode);
+        suggestionItem.addEventListener("click", () => {
+            input.value = item.example
+        });
+        suggestionsContainer.appendChild(suggestionItem);
+    });
+}
+
+const modal = document.getElementById("modal");
+const openModalButton = document.getElementById("openModal");
+const closeButton = document.querySelector(".close");
+const rsltContent = document.getElementById("result-content");
+closeButton.onclick = function() {
+    modal.style.display = "none"; // 隐藏警告框
+};
+
+const dateOptions = {
+    year: 'numeric', 
+    month: '2-digit', 
+    day: '2-digit', 
+    hour: '2-digit', 
+    minute: '2-digit', 
+    second: '2-digit',
+    hour12: false // 24小时制
+};
+
+function handlerToolAction(inputStr) {
+    const inputArray = inputStr.split(":").map(part => part.trim()).filter(part => part.length > 0);
+    console.log("input:", inputArray)
+    if (inputArray.length < 1) {
+        return
+    }
+    if (inputArray[0] == "yd") {
+        const ydURL = "https://m.youdao.com/result?lang=en&word=" + inputArray[1]
+        window.open(ydURL)
+    } else if (inputArray[0] == "csdn") {
+        const csdnURL = "https://blog.csdn.net/" + inputArray[1]
+        window.open(csdnURL)
+    } else if (inputArray[0] == "ts") {
+        if (inputArray[1] == "now") {
+            rsltContent.innerHTML = ""
+            const currentDate = new Date();
+            const dateP = document.createElement("p")
+            dateP.textContent = "当前时间：" + currentDate.toLocaleString("zh-CN", dateOptions);
+            rsltContent.appendChild(dateP)
+            const tsP = document.createElement("p")
+            tsP.textContent = "时间戳：" + currentDate.getTime()
+            rsltContent.appendChild(tsP)
+        } else {
+            rsltContent.innerHTML = ""
+            let ts = Number(inputArray[1])
+            if (ts.toString().length === 10) {
+                // 如果是 10 位，则转换为毫秒
+                ts *= 1000; // 将秒转换为毫秒
+            }
+            const date = new Date(ts);
+            const dateP = document.createElement("p")
+            dateP.textContent = "对应当地时间：" + date.toLocaleString("zh-CN", dateOptions);
+            rsltContent.appendChild(dateP)
+
+        }
+        modal.style.display = "block";
+    }
+}
+
+// 输入框获得焦点事件
+input.addEventListener("focus", () => {
+    // 在这里显示建议列表
+    showSuggestions();  
+});
+
+// 处理键盘事件
+let selectedIndex = -1; // 当前选中的建议项索引
+input.addEventListener("keydown", (event) => {
+    const suggestions = suggestionsContainer.getElementsByClassName("suggestion-item");
+    if (event.key === "ArrowDown") {
+        selectedIndex = (selectedIndex + 1) % suggestions.length; // 循环选择
+        event.preventDefault(); // 阻止页面滚动
+        input.value = suggestions[selectedIndex].textContent;
+    } else if (event.key === "ArrowUp") {
+        selectedIndex = (selectedIndex - 1 + suggestions.length) % suggestions.length; // 循环选择
+        event.preventDefault(); // 阻止页面滚动
+        input.value = suggestions[selectedIndex].textContent;
+    } else if (event.key == "Enter") {
+        handlerToolAction(input.value);
+    }
+
+    Array.from(suggestions).forEach((item, index) => {
+        if (index == selectedIndex) {
+            item.classList.add("active");
+        } else {
+            item.classList.remove("active");
+        }
+    });
+});
+
+// 点击输入框外的区域时，关闭下拉建议
+document.addEventListener("click", (event) => {
+    if (!event.target.closest(".cmd-view")) {
+        // 隐藏建议列表
+        suggestionsContainer.style.display = 'none'; 
+        input.classList.remove('active');
+    }
+});

@@ -197,7 +197,8 @@ h1 {
 
 .clock {
   margin: 32px auto 0 auto;
-  display: flex;
+  /* display: flex; */
+  display: none;  /* 暂时不展示了 */
   justify-content: center;
   align-items: center;
   font-family: 'Orbitron', Arial, sans-serif;
@@ -321,6 +322,99 @@ h1 {
     /* background: rgba(235, 241, 241, 0.22); */
 }
 
+.cmd-view {
+    width: 35%;
+}
+
+.command {
+    width: 100%; /* 宽度 */
+    padding: 10px; /* 内边距 */
+    /*border: 2px solid #007BFF; /* 边框 */
+    border: none;
+    border-radius: 10px; /* 圆角 */
+    font-size: 16px; /* 字体大小 */
+    color: #333; /* 字体颜色 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影 */
+    transition: border-color 0.3s ease; /* 动画效果 */
+} 
+
+input.active {
+    border: none;
+    outline: none;
+    border-radius: 10px 10px 0 0;
+}
+
+#suggestions {
+    width: 100%;
+}
+
+.suggestion-item {
+    width: 100%; /* 宽度 */
+    text-align: left;
+    font-size: 16px; /* 字体大小 */
+    color: #637; /* 字体颜色 */
+    background-color: #ffffff;
+    padding: 10px; /* 内边距 */
+    font-weight: 2px;
+}
+
+#suggestions .active {
+    background-color: #d9e4ef;
+}
+
+.suggestion-last-item {
+    border-radius: 0 0 10px 10px;
+}
+
+.fa {
+    padding-right: 10px;
+}
+
+.modal {
+    display: none; /* 默认隐藏弹窗 */
+    position: absolute;
+    z-index: 10; /* 确保弹窗在其他内容之上 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 全屏宽度 */
+    height: 100%; /* 全屏高度 */
+    overflow: auto; /* 如果需要，允许滚动 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    transition: opacity 0.3s ease; /* 动画过渡效果 */
+}
+
+.modal-content {
+    background-color: white; /* 弹窗内容的背景颜色 */
+    margin: 15% auto; /* 上下居中，左右自适应 */
+    padding: 20px;
+    border: 1px solid #888; /* 边框样式 */
+    width: 30%; /* 弹窗宽度 */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    border-radius: 8px; /* 圆角效果 */
+}
+
+#modal h2 {
+    color: #000000;
+}
+
+.modal-content p {
+    color: #000000;
+}
+
+.close {
+    color: #aaa; /* 关闭按钮颜色 */
+    float: right; /* 右浮动 */
+    font-size: 28px;
+    font-weight: bold; /* 文字加粗 */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* 悬停时颜色改变 */
+    text-decoration: none; /* 取消下划线 */
+    cursor: pointer; /* 光标变为手型 */
+}
+
 @media screen and (max-width: 600px) {
     #introduction {
         padding: 0px;
@@ -342,5 +436,9 @@ h1 {
 
     .clock span {
         min-width: 1ch;
+    }
+
+    .cmd-view {
+        width: 80%;
     }
 }

@@ -16,6 +16,7 @@
   gtag('config', 'G-ZWM180KBCV');
 </script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23ff8800'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-size='32' font-family='Orbitron,Arial,sans-serif' font-weight='bold' fill='white'%3EFR%3C/text%3E%3C/svg%3E">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;display=swap" rel="stylesheet">
 </head>
@@ -31,7 +32,7 @@
                 <div>
                     <a href="#introduction" data-target="introduction">HOME</a>
                     <a href="#blog" data-target="blog">BLOG</a>
-                    <a href="#tool" data-target="tool">LINK</a>
+                    <a href="#tool" data-target="tool">TOOLBAR</a>
                 </div>
             </nav>
             <p>𝕯𝖔𝖓'𝖙 𝖋𝖔𝖗𝖌𝖊𝖙 𝖞𝖔𝖚𝖗 𝖉𝖗𝖊𝖆𝖒𝖘 𝖆𝖇𝖔𝖚𝖙 𝖑𝖎𝖙𝖊𝖗𝖆𝖙𝖚𝖗𝖊, 𝖆𝖇𝖔𝖚𝖙 𝖑𝖔𝖛𝖊, </p>
@@ -48,8 +49,19 @@
                 <span id="m">00</span><span class="colon">:</span>
                 <span id="s">00</span>
             </div>
-            <a href="https://www.bejson.com/convert/unix/" target="_blank" rel="noopener noreferrer">Date Convert</a>
-            <a href="https://blog.csdn.net/fured?type=blog" target="_blank" rel="noopener noreferrer">CSDN Blog</a>
+            <!-- <a href="https://www.bejson.com/convert/unix/" target="_blank" rel="noopener noreferrer">Date Convert</a> -->
+            <div class="cmd-view">
+                <input type="text" id="command" placeholder="Type a command..." class="command">
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+            <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <h2>结果</h2>
+                <div id="result-content"></div>
+            </div>
+        </div>
+            <!-- <a href="https://blog.csdn.net/fured?type=blog" target="_blank" rel="noopener noreferrer">MY CSDN BLOG</a> -->
         </section>
     </div>
 
