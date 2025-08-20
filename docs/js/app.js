@@ -146,6 +146,10 @@ const cmdList = [
         "icon": "fa fa-clipboard",
     },
     {
+        "example": "ts: age",
+        "icon": "fa fa-clipboard",
+    },
+    {
         "example": "csdn: fured",
         "icon": "fa fa-link",
     },
@@ -220,6 +224,23 @@ function handlerToolAction(inputStr) {
             const tsP = document.createElement("p")
             tsP.textContent = "时间戳：" + currentDate.getTime()
             rsltContent.appendChild(tsP)
+        } else if (inputArray[1] == "age") {
+            rsltContent.innerHTML = ""
+            const start = new Date('2025-08-04T10:47:20');
+            const now = new Date();
+
+            let diff = Math.floor((now - start) / 1000); // 秒差
+
+            const days = Math.floor(diff / (24 * 3600));
+            diff %= 24 * 3600;
+            const hours = Math.floor(diff / 3600);
+            diff %= 3600;
+            const minutes = Math.floor(diff / 60);
+            const seconds = diff % 60;
+            const dateP = document.createElement("p")
+            dateP.textContent = "已建站：" + days + "天 " + hours + "时 " + minutes + "分 " + seconds + "秒";
+            rsltContent.appendChild(dateP)
+
         } else {
             rsltContent.innerHTML = ""
             let ts = Number(inputArray[1])
